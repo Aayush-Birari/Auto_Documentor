@@ -1,12 +1,11 @@
 import os
-import google.generativeai as genai
+from google import genai # CHANGED: New library import
 
-# Correctly fetch the environment variable named "GEMINI_API_KEY"
+# Fetch the API key from the Jenkins environment
 api_key = os.getenv("GEMINI_API_KEY")
 
-# Configure the AI model
-genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-1.5-flash')
+# CHANGED: Initialize the new client
+client = genai.Client(api_key=api_key)
 
 def generate_readme(code_content):
     prompt = f"""
@@ -16,7 +15,12 @@ def generate_readme(code_content):
 
     {code_content}
     """
-    response = model.generate_content(prompt)
+    
+    # CHANGED: New syntax for generating content
+    response = client.models.generate_content(
+        model='gemini-1.5-flash',
+        contents=prompt
+    )
     return response.text
 
 if __name__ == "__main__":

@@ -19,7 +19,7 @@ pipeline {
         
         stage('Install Dependencies') {
             steps {
-                sh 'pip install google-generativeai'
+                sh 'pip install google-genai'
             }
         }
         

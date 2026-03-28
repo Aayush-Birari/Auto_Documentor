@@ -1,8 +1,11 @@
 import os
 import google.generativeai as genai
 
-# Load the API key from the environment (Jenkins will provide this securely)
-genai.configure(api_key=os.getenv("AIzaSyDtNINi4gzBXgCVywn4tK81jHmJ7Me6C7c"))
+# Correctly fetch the environment variable named "GEMINI_API_KEY"
+api_key = os.getenv("GEMINI_API_KEY")
+
+# Configure the AI model
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 def generate_readme(code_content):

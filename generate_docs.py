@@ -24,7 +24,7 @@ def generate_readme(code_content):
                 "content": prompt,
             }
         ],
-        model="llama3-8b-8192", 
+        model="llama-3.1-8b-instant", 
     )
     return chat_completion.choices[0].message.content
 
@@ -38,4 +38,8 @@ if __name__ == "__main__":
     with open("README.md", "w") as file:
         file.write(readme_content)
 
+<<<<<<< HEAD
     print("README.md successfully updated!")
+=======
+    print("README.md successfully updated!")
+>>>>>>> 51ef4d2c03f2faa4476aa988884757f498ef2a95

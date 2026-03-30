@@ -1,11 +1,11 @@
 import os
-from google import genai # CHANGED: New library import
+from groq import Groq
 
-# Fetch the API key from the Jenkins environment
-api_key = os.getenv("GEMINI_API_KEY")
+# Jenkins will inject the key we saved
+api_key = os.getenv("GEMINI_API_KEY") 
 
-# CHANGED: Initialize the new client
-client = genai.Client(api_key=api_key)
+# Initialize the Groq client
+client = Groq(api_key=api_key)
 
 def generate_readme(code_content):
     prompt = f"""
@@ -16,23 +16,25 @@ def generate_readme(code_content):
     {code_content}
     """
     
-    # CHANGED: New syntax for generating content
-    response = client.models.generate_content(
-        model='gemini-2.0-flash',
-        contents=prompt
+    # Using Meta's Llama 3 model via Groq (Super fast, no billing traps)
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "user",
+                "content": prompt,
+            }
+        ],
+        model="llama3-8b-8192", 
     )
-    return response.text
+    return chat_completion.choices[0].message.content
 
 if __name__ == "__main__":
-    # 1. Read the application code
     with open("app.py", "r") as f:
         code = f.read()
 
-    # 2. Generate the documentation
-    print("Generating documentation via AI...")
+    print("Generating documentation via Groq AI...")
     readme_content = generate_readme(code)
 
-    # 3. Save it to a markdown file
     with open("README.md", "w") as file:
         file.write(readme_content)
 

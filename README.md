@@ -4,48 +4,46 @@
 **Description**
 ---------------
 
-A simple command-line calculator implemented in Python. The calculator allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
+A simple command-line calculator that performs basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
 **Prerequisites**
------------------
+----------------
 
-* Python 3.x installed on your system
+* Python 3.6 or higher (tested with Python 3.9)
 
 **How to Run**
 --------------
 
-### 1. Clone or Copy the Repository
+### Using Python
 
-```bash
-git clone https://example.com/simple-calculator.git  # Replace with your repository URL
-cd simple-calculator
-```
+1. Clone the repository to your local machine by running: `git clone https://github.com/your-username/repository-name.git`
+2. Navigate to the project directory: `cd repository-name`
+3. Install the required dependencies using pip: `pip install -r requirements.txt`
+4. Run the calculator using the following command: `python calculator.py`
 
-Alternatively, you can download this repository and extract it to a directory.
+### Directly from the Code
 
-### 2. Run the Calculator
+1. Save the following code in a file named `calculator.py`
+2. Open a terminal or command prompt and navigate to the file's directory
+3. Run the calculator using the following command: `python calculator.py`
 
-```bash
-python3 calculator.py
-```
+### Command-Line Interface
 
-If you don't have a Python 3.x interpreter installed, you can download and install Python from the official Python website: <https://www.python.org/downloads/>
-
-### 3. Use the Calculator
-
-When you run the calculator, it will display a menu with the available operations:
+When you run the calculator, you will be presented with the following menu:
 
 ```
 1:+, 2:-, 3:*, 4:/
 ```
 
-Enter the number of the operation you want to perform (1-4), and then enter two numbers to be added, subtracted, multiplied, or divided. For example:
+Enter the number of the operation you wish to perform (1-4), followed by the inputs for `Num 1` and `Num 2`.
+
+For example, to perform addition, you would enter:
 
 ```
 Enter choice (1-4): 1
-Num 1: 5
-Num 2: 3
-Result: 8.0
+Num 1: 10
+Num 2: 5
+Result: 15.0
 ```
 
-Note: If you divide by zero, the calculator will display an error message instead of crashing.
+Note: Division by zero will result in an error.

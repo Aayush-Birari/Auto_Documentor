@@ -1,61 +1,66 @@
-**Calculator README**
-======================
+# Simple Command-Line Calculator
+=====================================
 
-### Description
+## Description
+------------
 
-This is a simple command-line calculator program written in Python. It provides a basic arithmetic calculator that can perform addition, subtraction, multiplication, and division operations.
+A simple command-line calculator that takes two numbers and a mathematical operation as input from the user and displays the result. The calculator supports four basic arithmetic operations: addition, subtraction, multiplication, and division.
 
-### Prerequisites
+## Prerequisites
+-------------
 
-* Python 3.6 or later
+* Python 3.6 or later version
+* A code editor or IDE for execution
 
-### How to Run
+## How to Run
+------------
 
-To run the calculator, follow these steps:
+### Clone the Repository
 
-1. Make sure you have Python installed on your system. You can download the latest version from the official Python website.
-2. Clone this repository to a directory of your choice using Git:
-   ```bash
-git clone https://your-repo-url.com/calculator.git
+To run the code, you will need to clone the repository. You can do this by running the following command in your terminal:
+
+```bash
+git clone https://github.com/your-username/simple-calculator.git
 ```
-3. Change into the calculator directory:
-   ```bash
-cd calculator
-```
-4. Run the calculator program using Python:
-   ```bash
+
+Replace `https://github.com/your-username/simple-calculator.git` with the actual repository URL.
+
+### Install Required Packages
+
+Since the code uses Python, you don't need to install any additional packages. You can run the code directly.
+
+### Run the Code
+
+Navigate to the directory where you cloned the repository and run the following command:
+
+```bash
 python calculator.py
 ```
-5. The calculator will display a menu with the available operations. Enter the number corresponding to your chosen operation, and then enter the numbers you want to operate on.
-6. The calculator will display the result of the operation, or an error message if the operation is invalid.
 
-**Example Use Cases**
+Replace `calculator.py` with the actual name of the Python file.
 
-* Run the calculator program:
-   ```bash
-python calculator.py
+## Usage
+-----
+
+When you run the code, it will prompt you to choose a mathematical operation by entering a number between 1 and 4. Based on your choice, it will ask for two numbers. Then, it will display the result of the operation.
+
+Here's an example usage:
+
 ```
-* Choose an operation (e.g. addition):
-   ```bash
-1:
+1:+, 2:-, 3:*, 4:/
+Enter choice (1-4): 1
+Num 1: 10
+Num 2: 20
+Result: 30.0
 ```
-* Enter the first number:
-   ```
-   Num 1: 5
-   ```
-* Enter the second number:
-   ```
-   Num 2: 3
-   ```
-* The calculator will display the result:
-   ```bash
- Result: 8
-   ```
-* Try an invalid operation (e.g. division by zero):
-   ```
-   Num 2: 0
-   ```
-* The calculator will display an error message:
-   ```
-   Error
-   ```
+
+Note that if you choose division and enter 0 as the second number, it will display "Error" instead of attempting division by zero.
+
+## Commit History
+----------------
+
+The code has been tested and works as expected. However, you can view the commit history and changes made to the code by running the following command in your local repository:
+
+```bash
+git log
+```

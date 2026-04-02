@@ -1,49 +1,61 @@
-**Simple Command-Line Calculator**
-=====================================
+**Calculator README**
+======================
 
-**Description**
----------------
+### Description
 
-A simple command-line calculator that performs basic arithmetic operations such as addition, subtraction, multiplication, and division.
+This is a simple command-line calculator program written in Python. It provides a basic arithmetic calculator that can perform addition, subtraction, multiplication, and division operations.
 
-**Prerequisites**
-----------------
+### Prerequisites
 
-* Python 3.6 or higher (tested with Python 3.9)
+* Python 3.6 or later
 
-**How to Run**
---------------
+### How to Run
 
-### Using Python
+To run the calculator, follow these steps:
 
-1. Clone the repository to your local machine by running: `git clone https://github.com/your-username/repository-name.git`
-2. Navigate to the project directory: `cd repository-name`
-3. Install the required dependencies using pip: `pip install -r requirements.txt`
-4. Run the calculator using the following command: `python calculator.py`
-
-### Directly from the Code
-
-1. Save the following code in a file named `calculator.py`
-2. Open a terminal or command prompt and navigate to the file's directory
-3. Run the calculator using the following command: `python calculator.py`
-
-### Command-Line Interface
-
-When you run the calculator, you will be presented with the following menu:
-
+1. Make sure you have Python installed on your system. You can download the latest version from the official Python website.
+2. Clone this repository to a directory of your choice using Git:
+   ```bash
+git clone https://your-repo-url.com/calculator.git
 ```
-1:+, 2:-, 3:*, 4:/
+3. Change into the calculator directory:
+   ```bash
+cd calculator
 ```
-
-Enter the number of the operation you wish to perform (1-4), followed by the inputs for `Num 1` and `Num 2`.
-
-For example, to perform addition, you would enter:
-
+4. Run the calculator program using Python:
+   ```bash
+python calculator.py
 ```
-Enter choice (1-4): 1
-Num 1: 10
-Num 2: 5
-Result: 15.0
-```
+5. The calculator will display a menu with the available operations. Enter the number corresponding to your chosen operation, and then enter the numbers you want to operate on.
+6. The calculator will display the result of the operation, or an error message if the operation is invalid.
 
-Note: Division by zero will result in an error.
+**Example Use Cases**
+
+* Run the calculator program:
+   ```bash
+python calculator.py
+```
+* Choose an operation (e.g. addition):
+   ```bash
+1:
+```
+* Enter the first number:
+   ```
+   Num 1: 5
+   ```
+* Enter the second number:
+   ```
+   Num 2: 3
+   ```
+* The calculator will display the result:
+   ```bash
+ Result: 8
+   ```
+* Try an invalid operation (e.g. division by zero):
+   ```
+   Num 2: 0
+   ```
+* The calculator will display an error message:
+   ```
+   Error
+   ```

@@ -1,19 +1,29 @@
 pipeline {
     agent any
+    
+    options {
+        skipDefaultCheckout()
+    }
+
     environment {
-        // This is for the Python script
         GEMINI_API_KEY = credentials('gemini-api-key')
-        // This is for pushing back to GitHub
         GITHUB_CREDS = credentials('github-token-push')
     }
-    
+
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/main']],
+                    extensions: [
+                        [$class: 'MessageExclusion', excludedMessage: '(?s).*.*\\[skip ci\\].*.*']
+                    ],
+                    userRemoteConfigs: [[url: 'https://github.com/Aayush-Birari/Auto_Documentor.git']]
+                ])
             }
         }
-        
+                
         stage('Install Dependencies') {
             steps {
                 sh 'pip install groq'

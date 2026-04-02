@@ -4,34 +4,48 @@
 **Description**
 ---------------
 
-A simple command-line calculator that allows users to perform basic arithmetic operations (addition, subtraction, multiplication, and division) on two numbers.
+A simple command-line calculator implemented in Python. The calculator allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
 **Prerequisites**
 -----------------
 
-* Python 3.6 or higher
-* Basic understanding of Python syntax and data types
+* Python 3.x installed on your system
 
 **How to Run**
 --------------
 
-1. Make sure Python is installed on your system.
-2. Clone or download the code from a repository (e.g., GitHub).
-3. Save the code in a file with a `.py` extension (e.g., `calculator.py`).
-4. Open a terminal or command prompt and navigate to the directory where you saved the file.
-5. Run the calculator using the following command:
-   ```bash
-python calculator.py
+### 1. Clone or Copy the Repository
+
+```bash
+git clone https://example.com/simple-calculator.git  # Replace with your repository URL
+cd simple-calculator
 ```
-6. Follow the prompts to perform calculations:
-   * Enter the operation you want to perform (1 for addition, 2 for subtraction, 3 for multiplication, or 4 for division).
-   * Enter the first number.
-   * Enter the second number.
-   The calculator will display the result or an error message if the input is invalid.
 
-**Code Explanation**
---------------------
+Alternatively, you can download this repository and extract it to a directory.
 
-The `calculator.py` file defines a single function `calculator()` that handles user input and performs arithmetic operations. The function uses a dictionary `ops` to map operation numbers (1-4) to their corresponding symbols and functions. The function also includes error handling for invalid user input.
+### 2. Run the Calculator
 
-This code is designed to be simple and easy to use, making it suitable for beginners who want to learn about basic Python programming concepts.
+```bash
+python3 calculator.py
+```
+
+If you don't have a Python 3.x interpreter installed, you can download and install Python from the official Python website: <https://www.python.org/downloads/>
+
+### 3. Use the Calculator
+
+When you run the calculator, it will display a menu with the available operations:
+
+```
+1:+, 2:-, 3:*, 4:/
+```
+
+Enter the number of the operation you want to perform (1-4), and then enter two numbers to be added, subtracted, multiplied, or divided. For example:
+
+```
+Enter choice (1-4): 1
+Num 1: 5
+Num 2: 3
+Result: 8.0
+```
+
+Note: If you divide by zero, the calculator will display an error message instead of crashing.

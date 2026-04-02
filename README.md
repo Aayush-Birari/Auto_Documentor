@@ -1,36 +1,23 @@
-# Simple Command-Line Calculator
+**Simple Command-Line Calculator**
 =====================================
 
-Description
-------------
+### Description
 
-A simple command-line calculator that performs basic arithmetic operations:
-
-*   Addition (+)
-*   Subtraction (-)
-*   Multiplication (\*)
-*   Division (/)
+This is a simple command-line calculator that performs basic arithmetic operations. It allows users to choose an operation, input two numbers, and view the result.
 
 ### Prerequisites
 
-*   Python 3.8 or higher
-*   No external dependencies required
+* Python 3.6 or later
+* No external dependencies required
 
 ### How to Run
 
-1.  Install the required Python version (if not already installed).
-2.  Clone or download the repository containing the `calculator.py` file.
-3.  Navigate to the repository directory in your terminal/command prompt.
-4.  Run the calculator using Python:
+1. Clone this repository or download the `calculator.py` script.
+2. Open a terminal or command prompt and navigate to the directory where you saved the script.
+3. Run the script using Python: `python calculator.py`
+4. Follow the prompts to select an operation and input numbers.
+5. View the result on the command line.
 
-    ```bash
-python calculator.py
-```
-5.  Follow the prompts to select an operation, enter the required numbers, and view the result.
+### Getting Started
 
-### Notes
-
-*   The calculator supports basic arithmetic operations for two numbers.
-*   Division by zero results in an error message.
-*   This is a simple implementation and does not handle more complex use cases or user input errors beyond invalid numbers.
-*   The calculator's functionality is defined in the `calculator()` function.
+To use the calculator, simply run the script and follow the on-screen instructions. Choose an operation by entering the corresponding number (1: +, 2: -, 3: *, 4: /), and then input two numbers. The result will be displayed on the command line.

@@ -4,32 +4,45 @@
 **Description**
 ---------------
 
-This is a simple command-line calculator that allows users to perform basic arithmetic operations, including addition, subtraction, multiplication, division, and squaring (raising a number to the power of 2).
+This is a simple command-line calculator that performs basic arithmetic operations such as addition, subtraction, multiplication, division, and squaring. The user is prompted to select an operation and input the necessary numbers to perform the calculation.
 
 **Prerequisites**
------------------
-
-* Python 3.x (tested on Python 3.8 and 3.9)
-
-**How to Run**
---------------
-
-To run the calculator, follow these steps:
-
-1. Save the provided code in a file named `calculator.py`.
-2. Open a terminal or command prompt.
-3. Navigate to the directory where you saved the file.
-4. Run the calculator by executing the command `python calculator.py`.
-5. Follow the on-screen instructions to select an operation and enter input values.
-
-**Example Usage**
 ----------------
 
-1. Run the calculator by executing `python calculator.py`.
-2. You will see a menu displaying the available operations and their corresponding numbers (1-5).
-3. Enter the number of the operation you wish to perform (1 for addition, 2 for subtraction, etc.).
-4. If you selected an operation that requires two numbers (1-4), enter the two numbers when prompted.
-5. If you selected the squaring operation (5), enter a single number.
-6. The calculator will display the result of the operation.
+* Python 3.x installed on the system
 
-**Note**: If you enter an invalid number or choice, the calculator will display an error message.
+**How to Run**
+---------------
+
+To run this calculator, follow these steps:
+
+1. Save the code in a file named `calculator.py`.
+2. Open a terminal or command prompt and navigate to the directory where you saved the file.
+3. Run the script using the command `python calculator.py`.
+4. Follow the on-screen instructions to select an operation and input the necessary numbers.
+5. The calculator will display the result of the calculation.
+
+### Example Use Case
+
+```bash
+$ python calculator.py
+1:+, 2:-, 3:*, 4:/, 5:^2
+Enter choice (1-5): 3
+Num 1: 10
+Num 2: 5
+Result: 50
+```
+
+### Running the Calculator in an Environment
+
+To run the calculator in a more interactive environment, you can add a `if __name__ == "__main__":` guard to the script to ensure it is only executed when run directly. Update the script as follows:
+
+```python
+def calculator():
+    # ...
+
+if __name__ == "__main__":
+    calculator()
+```
+
+You can then run the script using the command `python calculator.py` and interact with the calculator in a more conventional way.

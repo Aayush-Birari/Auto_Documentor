@@ -1,45 +1,49 @@
-**Simple Command-Line Calculator**
-=====================================
+**Calculator**
+=============
 
 **Description**
 ---------------
 
-A simple command-line calculator that performs basic arithmetic operations, including addition, subtraction, multiplication, division, and squaring, as well as a power operation.
+This is a simple command-line calculator that supports basic arithmetic operations such as addition, subtraction, multiplication, division, and squaring. The calculator allows users to choose an operation and input their numbers, providing a clear and concise result.
 
 **Prerequisites**
 -----------------
 
-* Python 3.x (tested with Python 3.8 and 3.10)
+To run the calculator, you will need:
+
+* Python 3.x installed on your system
+* A compatible text editor or IDE for modifying the code
+* Access to a command prompt or terminal
 
 **How to Run**
 --------------
 
-1. Clone the repository: `git clone https://github.com/your-github-username/simple-calculator.git`
-2. Navigate to the project directory: `cd simple-calculator`
-3. Install required dependencies (none required for this project)
-4. Run the calculator using the following command: `python calculator.py`
-5. Follow the on-screen prompts to perform calculations:
+### Step 1: Install Python (if necessary)
 
-### Example Usage
+If you do not have Python installed on your system, please download and install the latest version from the official [Python website](https://www.python.org/downloads/).
 
+### Step 2: Save the Calculator Code
+
+Save the calculator code in a file named `calculator.py`. This file should include the provided code.
+
+### Step 3: Run the Calculator
+
+Open a command prompt or terminal, navigate to the directory containing the `calculator.py` file, and run the following command:
+```bash
+python calculator.py
 ```
-1:+, 2:-, 3:*, 4:/, 5:^2
-Enter choice (1-5): 3
-Num 1: 10
-Num 2: 2
-Result: 20
+This will launch the calculator and display the available operations.
 
-1:+, 2:-, 3:*, 4:/, 5:^2
-Enter choice (1-5): 1
-Num 1: 10
-Num 2: 2
-Result: 12
+**Using the Calculator**
+------------------------
 
-1:+, 2:-, 3:*, 4:/, 5:^2
-Enter choice (1-5): 4
-Num 1: 10
-Num 2: 0
-Error: Division by zero
-```
+To use the calculator, simply follow these steps:
 
-Note: Replace `https://github.com/your-github-username/simple-calculator.git` with your actual GitHub repository URL.
+1. Choose an operation by entering the corresponding number (1-5)
+2. If necessary, input two numbers
+3. The calculator will display the result of the operation
+
+**Troubleshooting**
+------------------
+
+If you encounter any issues, such as invalid number input or division by zero, the calculator will display an error message. Please refer to the error message for more information.

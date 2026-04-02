@@ -1,46 +1,39 @@
 **Simple Command-Line Calculator**
-=====================================
+======================================
+
+A console-based calculator that allows users to perform basic arithmetic operations.
 
 **Description**
 ---------------
 
-This script implements a basic command-line calculator that performs addition, subtraction, multiplication, and division operations. The user is presented with a menu of operations and is prompted to enter their choice, followed by the two numbers to be operated on.
+This Python program provides a simple command-line interface for basic arithmetic operations such as addition, subtraction, multiplication, and division. The user can choose an operation by entering a corresponding number and then enter the two numbers for the calculation.
 
 **Prerequisites**
------------------
+----------------
 
-*   Python 3.x (tested with Python 3.8 and 3.9)
+*   Python 3.6 or later (tested with Python 3.9)
 
 **How to Run**
 --------------
 
-### Steps to Run the Calculator
+### Option 1: Running from the Command Line
 
-1.  Save the code in a file named `calculator.py` (or any other name you prefer).
-2.  Install Python 3.x (if not already installed) from the official Python website.
-3.  Open a terminal or command prompt and navigate to the directory where you saved the `calculator.py` file.
-4.  Run the calculator by executing the command `python calculator.py`.
+1.  Save this code in a file named `calculator.py`.
+2.  Make sure Python 3.6 or later is installed on your system.
+3.  Open a terminal and navigate to the directory containing `calculator.py`.
+4.  Run the following command to execute the program: `python calculator.py`
+5.  Follow the in-program instructions to select an operation and enter the required numbers.
 
-### Example Use Cases
+### Option 2: Running in a Virtual Environment (Recommended)
 
-*   Perform simple arithmetic operations, such as adding two numbers:
-    ```
-python calculator.py
-1:+, 2:-, 3:*, 4:/
-Enter choice (1-4): 1
-Num 1: 2.5
-Num 2: 3.5
-Result: 6.0
-```
+1.  Save this code in a file named `calculator.py`.
+2.  Create a new virtual environment using a tool like `python -m venv myenv`.
+3.  Activate the virtual environment: `source myenv/bin/activate` (on Linux/Mac) or `myenv\Scripts\activate` (on Windows).
+4.  Install the required dependencies: `pip install -r requirements.txt` (no dependencies required).
+5.  Run the following command to execute the program: `python calculator.py`
+6.  Follow the in-program instructions to select an operation and enter the required numbers.
 
-*   Attempt to divide by zero:
-```bash
-python calculator.py
-1:+, 2:-, 3:*, 4:/
-Enter choice (1-4): 4
-Num 1: 10
-Num 2: 0
-Result: Error
-```
+**Note**
+----
 
-Note that if an invalid number is entered, the calculator will display an error message. Similarly, if an invalid operation is chosen, the calculator will display an error message.
+Please handle the calculator carefully and do not use it to make critical financial decisions. This is a simple, command-line-based calculator intended for educational or testing purposes only.

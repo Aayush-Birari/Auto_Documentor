@@ -1,32 +1,53 @@
-import os
-from groq import Groq
+global N
 
-api_key = os.getenv("GEMINI_API_KEY") 
-client = Groq(api_key=api_key)
+def printSolution(board):
+	for i in range(N):
+		for j in range(N):
+			print (board[i][j],end=' ')
+		print()
 
-def generate_readme(code_content):
-    prompt = f"""
-    You are an expert technical writer. Write a clear, professional README.md 
-    for the following code. Include a Title, Description, Prerequisites, 
-    and How to Run sections. Here is the code:
+def isSafe(board, row, col):
+	for i in range(col):
+		if board[row][i] == 1:
+			return False
 
-    {code_content}
-    """
-    
-    chat_completion = client.chat.completions.create(
-        messages=[{"role": "user", "content": prompt}],
-        model="llama-3.1-8b-instant", 
-    )
-    return chat_completion.choices[0].message.content
+	for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
+		if board[i][j] == 1:
+			return False
 
-if __name__ == "__main__":
-    with open("app.py", "r") as f:
-        code = f.read()
+	for i, j in zip(range(row, N, 1), range(col, -1, -1)):
+		if board[i][j] == 1:
+			return False
 
-    print("Generating documentation via Groq AI...")
-    readme_content = generate_readme(code)
+	return True
 
-    with open("README.md", "w") as file:
-        file.write(readme_content)
+def solveNQUtil(board, col):
 
-    print("README.md successfully updated!")
+	if col >= N:
+		return True
+
+	for i in range(N):
+
+		if isSafe(board, i, col):
+			board[i][col] = 1
+
+			if solveNQUtil(board, col + 1) == True:
+				return True
+
+			board[i][col] = 0
+
+	return False
+
+def solveNQ():
+	board = [[0] * n for _ in range(n)]
+
+	if solveNQUtil(board, 0) == False:
+		print ("Solution does not exist")
+		return False
+
+	printSolution(board)
+	return True
+
+n = int(input("Enter total number of rows: "))
+N = n
+solveNQ()

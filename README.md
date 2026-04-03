@@ -1,38 +1,22 @@
-# Title: Groq AI README Generator
+# README for N-Queens Problem Solver
+
+## Title
+N-Queens Problem Solver: A Python Implementation
 
 ## Description
-
-This script uses the Groq API and a natural language processing (NLP) model to generate a professional README file for a given codebase. The generated README file includes a title, description, prerequisites, and instructions on how to run the code.
-
-## Prerequisites
-
-* The Groq library must be installed (`pip install groq`)
-* The Gemini API key must be set as an environment variable (`GEMINI_API_KEY`)
-* The `llama-3.1-8b-instant` model must be available in the Groq account
-
-## How to Run
-
-1. Replace the `app.py` file with the code for which you want to generate a README file.
-2. Run the script using `python main.py` (assuming the script is named `main.py`)
-3. The script will generate a `README.md` file in the same directory, including a title, description, prerequisites, and how to run sections.
-
-Note: The `GEMINI_API_KEY` environment variable must be set to a valid API key for this script to work. The `llama-3.1-8b-instant` model must also be available in the Groq account.
-
-Here is the generated README file:
-```markdown
-# Title
-Generated README file for the codebase
-
-## Description
-This script uses the Groq API and a natural language processing (NLP) model to generate a professional README file for a given codebase. The generated README file includes a title, description, prerequisites, and instructions on how to run the code.
+This Python code solves the classic N-Queens problem using backtracking. The goal of the N-Queens problem is to place N queens on an NxN chessboard such that no queen attacks any other queen. This code takes input for the size of the chessboard and prints the solution if one exists.
 
 ## Prerequisites
-* The Groq library must be installed (`pip install groq`)
-* The Gemini API key must be set as an environment variable (`GEMINI_API_KEY`)
-* The `llama-3.1-8b-instant` model must be available in the Groq account
+- Python 3.x
+- Basic understanding of Python programming
 
 ## How to Run
-1. Replace the `app.py` file with the code for which you want to generate a README file.
-2. Run the script using `python main.py` (assuming the script is named `main.py`)
-3. The script will generate a `README.md` file in the same directory, including a title, description, prerequisites, and how to run sections.
-```
+To run the code, follow these steps:
+
+1. Save the code in a file named `n_queens_solver.py`.
+2. Open a terminal or command prompt and navigate to the directory where you saved the file.
+3. Run the command `python n_queens_solver.py` to execute the code.
+4. When prompted, enter the total number of rows for the chessboard (i.e., the size of the chessboard).
+5. If a solution exists, the code will print the solution to the console. Otherwise, it will print a message indicating that a solution does not exist.
+
+Note: This code uses a backtracking approach to solve the N-Queens problem. The time complexity of the code is O(N!), where N is the size of the chessboard. The code may take a long time to run for larger values of N.
